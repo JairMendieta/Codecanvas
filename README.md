@@ -50,3 +50,9 @@ Para comenzar a usar CodeCanvas AI, sigue estos sencillos pasos:
    ```
 
 4. Abre tu navegador y navega a `http://localhost:3000` para empezar a usar la aplicación.
+
+---
+
+## Desarrollado con ❤️ por
+
+Este proyecto fue desarrollado con amor por estudiantes de la **Escuela de Innovación Digital**, de la carrera de **Desarrollo de Software**.
