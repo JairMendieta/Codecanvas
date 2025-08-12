@@ -1,0 +1,21 @@
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper function to check if the user is the owner of the document
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+
+    match /users/{userId} {
+      // Allow users to create their own document
+      allow create: if isOwner(userId);
+      // Allow users to read their own document
+      allow read: if isOwner(userId);
+      // Allow users to update their own document, but NOT the credits field
+      allow write: if isOwner(userId);
+    }
+  }
+}
